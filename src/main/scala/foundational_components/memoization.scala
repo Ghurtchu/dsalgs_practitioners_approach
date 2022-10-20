@@ -24,13 +24,9 @@ object memoization {
 
   object memoized_factorial {
 
-    var cache: Map[Int, Int] = Map() // immutable hashmap
+    var cache: Map[Int, Int] = Map()
 
     def lookup(num: Int): Int = cache.getOrElse(num, 0)
-
-    // memoizedFactorial(3)
-    // 3 * memoizedFactorial(2)
-    // 3 *
 
     def memoizedFactorial(x: Int): Int = {
       if (x == 0 || x == 1) 1
